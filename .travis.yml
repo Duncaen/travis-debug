@@ -7,9 +7,10 @@ env:
     global:
         - PATH=$PATH:/tmp/bin
         - TAG=2019042701
+        - BOOTSTRAP=x86_64-musl
 
 install:
-    - docker.sh
+    - ./docker.sh
 
 script:
     - docker exec -t void hostrepo/test.sh
