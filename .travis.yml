@@ -1,0 +1,18 @@
+language: bash
+
+git:
+    depth: 200
+
+env:
+    global:
+        - PATH=$PATH:/tmp/bin
+        - TAG=2019042701
+
+install:
+    - docker.sh
+
+script:
+    - docker exec -t void hostrepo/test.sh
+
+notifications:
+    email: false
